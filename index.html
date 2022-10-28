@@ -21,21 +21,32 @@
             </div>
         </nav>
         <nav class="main-bar navbar navbar-light">
-            <a class="main_logo navbar-brand ms-4">Navbar</a>
-            <div class="main-bar__actions d-flex">
+            <div class="main_logo navbar-brand  ms-md-4 mx-auto">
+                <a href="#" class="h1 text-dark text-decoration-none">Navbar</a>
+            </div>
+            <div class="main-bar__actions d-flex d-none d-lg-flex">
                 <form class="search-bar d-flex me-4" action="">
                     <input class="search-bar__input" type="text" name="" id="" placeholder="Search...">
                     <button type="submit" class="search-bar__button">Search</button>
                 </form>
-                <button class="main-bar__button d-block">
+                <button class="main-bar__button d-block ">
                     <span>Call Us</span>
                     <br>
                     <span>111-111-111-111</span>
                 </button>
             </div>
+            <div class="mobile-menu-toggle hidden d-lg-none me-4 ">
+                <div id="menu-toggle-icon">
+                    <div class="bars-icon">
+                        <div class="bar-icon --middle"></div>
+                        <div class="bar-icon --top"></div>
+                        <div class="bar-icon --bottom"></div>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <nav class="bottom-bar navbar navbar-expand-lg navbar-light  ">
-            <ul class="navbar-nav main-menu-list ms-3 me-auto">
+        <nav class="bottom-bar navbar navbar-expand-lg navbar-light ">
+            <ul class="navbar-nav main-menu-list ms-lg-3 me-auto d-none d-lg-flex">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">SHOP ALL</a>
                 </li>
@@ -58,29 +69,44 @@
                     <a class="nav-link" href="#">CONTACT</a>
                 </li>
             </ul>
-            <div class="bottom-bar__action">
-                <div class="row justify-content-end">
-                    <div class="col col-6">
-                        <div class="account d-flex">
-                            <div class="account__avatar raito1x1 me-2">
-                                <img src="https://via.placeholder.com/50x50" alt="">
-                            </div>
-                            <div class="account__text">
-                                <a href="#" class="text-warning">Login</a>
-                            </div>
+            <ul class="socials__list list-inline d-lg-none ms-md-4 me-md-4 mb-0">
+                <li class="social list-inline-item">
+                    <a href=" #">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social list-inline-item">
+                    <a href=" #">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social list-inline-item">
+                    <a href=" #">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="bottom-bar__action me-md-4">
+                <div class="navbar">
+                    <div class="account d-flex me-3">
+                        <div class="account__avatar raito1x1 me-2">
+                            <img src="https://via.placeholder.com/50x50" alt="">
+                        </div>
+                        <div class="account__text">
+                            <a href="#" class="text-warning">Login</a>
                         </div>
                     </div>
-                    <div class="col col-6">
-                        <div class="shop-cart d-flex">
-                            <div class="shop-cart__icon">
-                                <img src="https://via.placeholder.com/50x50" alt="">
-                            </div>
-                            <div class="shop-cart__number raito1x1">
-                                <span>0</span>
-                            </div>
+                    <div id="header-shop-cart" class="shop-cart d-flex">
+                        <div class="shop-cart__icon">
+                            <img src="https://via.placeholder.com/50x50" alt="">
+                        </div>
+                        <div class="shop-cart__number raito1x1">
+                            <span>0</span>
                         </div>
                     </div>
                 </div>
+
+            </div>
             </div>
             </div>
         </nav>
@@ -91,13 +117,20 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://via.placeholder.com/1920x860" class="d-block w-100" alt="...">
+                            <div class="ratio ratio-16x9">
+                                <img src="https://via.placeholder.com/1920x860" class="d-block w-100" alt="...">
+                            </div>
+
                         </div>
                         <div class="carousel-item">
-                            <img src="https://via.placeholder.com/1920x860" class="d-block w-100" alt="...">
+                            <div class="ratio ratio-16x9">
+                                <img src="https://via.placeholder.com/1920x860" class="d-block w-100" alt="...">
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://via.placeholder.com/1920x860" class="d-block w-100" alt="...">
+                            <div class="ratio ratio-16x9">
+                                <img src="https://via.placeholder.com/1920x860" class="d-block w-100" alt="...">
+                            </div>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -119,12 +152,13 @@
 
         </section>
         <section class="section mb-5 product-categories">
-            <div class="container">
-                <div class="row mb-4">
-                    <div class="col col-md-4">
-                        <div class="product-categories__item h-100"
-                            style="background:url('https://via.placeholder.com/600x600') ;">
-                            <div class="product-categories__item__text-box p-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class=" col-md-4 mb-4">
+                        <div class="product-category min-h-400 h-100 "
+                            style="background-image: url('https://via.placeholder.com/600x600');">
+                            <div class="product-category__overlay"></div>
+                            <div class="product-category__text-box p-5 text-light">
                                 <h2>DEAL <br> OF THE <br> WEEK</h2>
                                 <div class="divider mx-auto " style="width: 5rem"></div>
                                 <p>50% OFF<br>on dog treats</p>
@@ -132,71 +166,77 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-6">
-                        <div class="product-categories__item h-100"
+                    <div class=" col-md-6 mb-4">
+                        <div class="product-category min-h-400 h-100 "
                             style="background-image: url('https://via.placeholder.com/600x600');">
-                            <div class="product-categories__item__text-box ps-4 pb-5 pt-5">
-                                <h3 class="product-categories__item__title">Dog</h2>
-                                    <p class="product-categories__item__subtitle">I'm a title. ​Click here to edit me.
+                            <div class="product-category__overlay"></div>
+                            <div class="product-category__text-box ps-4 pb-5 pt-5 text-light">
+                                <h3 class="product-category__title">Dog</h2>
+                                    <p class="product-category__subtitle">I'm a title. ​Click here to edit me.
                                     </p>
                                     <a href="#" class="rounded-0 btn btn-warning">Shop Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-2">
-                        <div class="product-categories__item h-100"
+                    <div class=" col-md-2 mb-4">
+                        <div class="product-category min-h-400 h-100 "
                             style="background-image: url('https://via.placeholder.com/600x600');">
-                            <div class="product-categories__item__text-box ps-4 pb-5 pt-5">
-                                <h3 class="product-categories__item__title">Cats</h3>
-                                <p class="product-categories__item__subtitle">I'm a title. ​Click here to edit me.
+                            <div class="product-category__overlay"></div>
+                            <div class="product-category__text-box ps-4 pb-5 pt-5 text-light">
+                                <h3 class="product-category__title">Cats</h3>
+                                <p class="product-category__subtitle">I'm a title. ​Click here to edit me.
                                 </p>
                                 <a href="#" class="rounded-0 btn btn-warning">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
-                    <div class="col col-md-4 ">
-                        <div class="product-categories__item h-100"
+                <div class="row">
+                    <div class=" col-md-4 mb-4">
+                        <div class="product-category min-h-400 h-100 "
                             style="background-image: url('https://via.placeholder.com/600x600');">
-                            <div class="product-categories__item__text-box ps-4 pb-5 pt-5">
+                            <div class="product-category__overlay"></div>
+                            <div class="product-category__text-box ps-4 pb-5 pt-5 text-light">
                                 <h3>Birds</h3>
-                                <p class="product-categories__item__subtitle">I'm a title. ​Click here to edit me.
+                                <p class="product-category__subtitle">I'm a title. ​Click here to edit me.
                                 </p>
                                 <a href="#" class="rounded-0 btn btn-warning">Shop Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-8">
-                        <div class="product-categories__item h-100"
+                    <div class=" col-md-8 mb-4">
+                        <div class="product-category min-h-400 h-100 "
                             style="background-image: url('https://via.placeholder.com/600x600');">
-                            <div class="product-categories__item__text-box ps-4 pb-5 pt-5">
-                                <h3 class="product-categories__item__title">Fish</h2>
-                                    <p class="product-categories__item__subtitle">I'm a title. ​Click here to edit me.
+                            <div class="product-category__overlay"></div>
+                            <div class="product-category__text-box ps-4 pb-5 pt-5 text-light">
+                                <h3 class="product-category__title">Fish</h2>
+                                    <p class="product-category__subtitle">I'm a title. ​Click here to edit me.
                                     </p>
                                     <a href="#" class="rounded-0 btn btn-warning">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
-                    <div class="col col-md-8">
-                        <div class="product-categories__item h-100"
+                <div class="row">
+                    <div class=" col-md-8 mb-4">
+                        <div class="product-category min-h-400 h-100"
                             style="background-image: url('https://via.placeholder.com/600x600');">
-                            <div class="product-categories__item__text-box ps-4 pb-5 pt-5">
-                                <h3 class="product-categories__item__title">Small Animals</h2>
-                                    <p class="product-categories__item__subtitle">I'm a title. ​Click here to edit me.
+                            <div class="product-category__overlay"></div>
+                            <div class="product-category__text-box ps-4 pb-5 pt-5 text-light">
+                                <h3 class="product-category__title">Small Animals</h2>
+                                    <p class="product-category__subtitle">I'm a title. ​Click here to edit me.
                                     </p>
                                     <a href="#" class="rounded-0 btn btn-warning">Shop Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-4">
-                        <div class="product-categories__item h-100"
+                    <div class=" col-md-4 mb-4">
+                        <div class="product-category min-h-400 h-100 "
                             style="background-image: url('https://via.placeholder.com/600x600');">
-                            <div class="product-categories__item__text-box ps-4 pb-5 pt-5">
+                            <div class="product-category__overlay"></div>
+                            <div class="product-category__text-box ps-4 pb-5 pt-5 text-light">
                                 <h3>Reptiles</h3>
-                                <p class="product-categories__item__subtitle">I'm a title. ​Click here to edit me.
+                                <p class="product-category__subtitle">I'm a title. ​Click here to edit me.
                                 </p>
                                 <a href="#" class="rounded-0 btn btn-warning">Shop Now</a>
                             </div>
@@ -207,20 +247,21 @@
         </section>
         <hr>
         <section class="section mb-5 products">
-            <div class="container">
+            <div class="container-fluid">
                 <h2 class="section__title text-warning mb-5 mt-4 text-center">Our Pets' Choice </h2>
-                <div class="row row-cols-5">
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 ">
                     <div class="col">
                         <div class="product">
                             <div class="product__image-box">
                                 <div class="product__image">
                                     <img src="https://via.placeholder.com/400x400" alt="" srcset="">
+                                    <div class="product__overlay">
+                                        <button class="product__view-button btn btn-light d-block w-100 rounded-0">
+                                            View
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="product__overlay">
-                                    <button class="product__view-button btn btn-light d-block w-100 rounded-0">
-                                        View
-                                    </button>
-                                </div>
+
                             </div>
                             <h4 class="product__title">I'm a product</h4>
                             <div class="divider mx-auto " style="width: 1.5rem; height: 1px;"></div>
@@ -244,21 +285,22 @@
                                 cart</button>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-3">
                         <div class="product">
                             <div class="product__image-box ">
                                 <div class="product__image">
                                     <img src="https://via.placeholder.com/400x400" alt="" srcset="">
+                                    <div class="product__overlay">
+                                        <button class="product__view-button btn btn-light d-block w-100 rounded-0">
+                                            View
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="product__overlay">
-                                    <button class="product__view-button btn btn-light d-block w-100 rounded-0">
-                                        View
-                                    </button>
-                                </div>
+
                             </div>
                             <h4 class="product__title">I'm a product</h4>
                             <div class="divider mx-auto " style="width: 1.5rem; height: 1px;"></div>
-                            <div class="product__price d-flex  product__price d-flex --with-sale">
+                            <div class="product__price d-flex  product__price justify-content-center mb-2 --with-sale">
                                 <div class="product__regular-price">
                                     <span class="currency-symbol">$</span><span>12.0</span>
                                 </div>
@@ -277,17 +319,18 @@
                                 cart</button>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-3">
                         <div class="product">
                             <div class="product__image-box">
                                 <div class="product__image">
                                     <img src="https://via.placeholder.com/400x400" alt="" srcset="">
+                                    <div class="product__overlay">
+                                        <button class="product__view-button btn btn-light d-block w-100 rounded-0">
+                                            View
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="product__overlay">
-                                    <button class="product__view-button btn btn-light d-block w-100 rounded-0">
-                                        View
-                                    </button>
-                                </div>
+
                             </div>
                             <h4 class="product__title">I'm a product</h4>
                             <div class="divider mx-auto " style="width: 1.5rem; height: 1px;"></div>
@@ -311,17 +354,18 @@
                                 cart</button>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-3">
                         <div class="product">
                             <div class="product__image-box">
                                 <div class="product__image">
                                     <img src="https://via.placeholder.com/400x400" alt="" srcset="">
+                                    <div class="product__overlay">
+                                        <button class="product__view-button btn btn-light d-block w-100 rounded-0">
+                                            View
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="product__overlay">
-                                    <button class="product__view-button btn btn-light d-block w-100 rounded-0">
-                                        View
-                                    </button>
-                                </div>
+
                             </div>
                             <h4 class="product__title">I'm a product</h4>
                             <div class="divider mx-auto " style="width: 1.5rem; height: 1px;"></div>
@@ -345,17 +389,18 @@
                                 cart</button>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-3">
                         <div class="product">
                             <div class="product__image-box">
                                 <div class="product__image">
                                     <img src="https://via.placeholder.com/400x400" alt="" srcset="">
+                                    <div class="product__overlay">
+                                        <button class="product__view-button btn btn-light d-block w-100 rounded-0">
+                                            View
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="product__overlay">
-                                    <button class="product__view-button btn btn-light d-block w-100 rounded-0">
-                                        View
-                                    </button>
-                                </div>
+
                             </div>
                             <h4 class="product__title">I'm a product</h4>
                             <div class="divider mx-auto " style="width: 1.5rem; height: 1px;"></div>
@@ -387,8 +432,8 @@
             </div>
         </section>
         <section class="section mb-5 top-seller ">
-            <div class="container pb-5 pt-5 bg-secondary">
-                <div class="top-seller__inner ">
+            <div class="container-fluid ">
+                <div class="top-seller__inner pb-5 pt-5 bg-secondary">
                     <h2 class="section__title text-warning mb-5 text-center">Best Brands at Lowest Prices </h2>
                     <div class="row w-100 justify-content-around mt-3">
                         <div class="col col-md-2">
@@ -422,85 +467,145 @@
         </section>
     </main>
     <footer>
-        <div class="footer">
-            <div class="container pt-5 mb-5 bg-warning">
-                <div class="row">
-                    <div class="col col-md-3">
-                        <div class="footer__col">
-                            <h4 class="footer__col__title mb-4">Our Flagship Store</h4>
-                            <p>500 Terry Francois Street <br> San Francisco, CA 94158 <br> Tel: 123-456-7890</p>
-                            <a href="#" class="link-dark text-decoration-none">View Stores List</a>
+        <div class="footer section">
+            <div class="container-fluid ">
+                <div class="footer__inner p-5 pb-2 mb-5 bg-warning">
+                    <div class="row">
+                        <div class=" col-md-3 mb-4">
+                            <div class="footer__col">
+                                <h4 class="footer__col__title mb-4">Our Flagship Store</h4>
+                                <p>500 Terry Francois Street <br> San Francisco, CA 94158 <br> Tel: 123-456-7890</p>
+                                <a href="#" class="link-dark text-decoration-none">View Stores List</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col col-md-3">
-                        <div class="footer__col">
-                            <h4 class="footer__col__title mb-4">Shop</h4>
-                            <ul class="footer__menu">
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                            </ul>
+                        <div class=" col-md-3">
+                            <div class="footer__col">
+                                <h4 class="footer__col__title mb-4">Shop</h4>
+                                <ul class="footer__menu">
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                </ul>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col col-md-3">
-                        <div class="footer__col">
-                            <h4 class="footer__col__title mb-4">Shop</h4>
-                            <ul class="footer__menu">
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                                <li class="footer__menu__item"><a href="#">Menu Item</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col col-md-3">
-                        <div class="footer__col">
-                            <h4 class="footer__col__title mb-4">Shop</h4>
-                            <form class="subscribe-form">
-                                <p>Emal Address</p>
-                                <input type="text" class="subscribe-input w-100 mb-2">
-                                <button type="submit" class="rounded-0 btn btn-dark d-block w-100">Subscribe</button>
-                                <p>Thanks for submitting!</p>
-                            </form>
-                            <div class="socials">
-                                <h4 class="footer__col__title mb-4">Socials</h4>
-
-                                <ul class="socials__list list-inline">
-                                    <li class="social list-inline-item">
-                                        <a href=" #">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="social list-inline-item">
-                                        <a href=" #">
-                                            <i class="fa-brands fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li class="social list-inline-item">
-                                        <a href=" #">
-                                            <i class="fa-brands fa-twitter"></i>
-                                        </a>
-                                    </li>
+                        <div class=" col-md-3 mb-4">
+                            <div class="footer__col">
+                                <h4 class="footer__col__title mb-4">Shop</h4>
+                                <ul class="footer__menu">
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
+                                    <li class="footer__menu__item"><a href="#">Menu Item</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                        <div class=" col-md-3 mb-4">
+                            <div class="footer__col">
+                                <h4 class="footer__col__title mb-4">Shop</h4>
+                                <form class="subscribe-form">
+                                    <p>Emal Address</p>
+                                    <input type="text" class="subscribe-input w-100 mb-2">
+                                    <button type="submit"
+                                        class="rounded-0 btn btn-dark d-block w-100">Subscribe</button>
+                                    <p>Thanks for submitting!</p>
+                                </form>
+                                <div class="socials">
+                                    <h4 class="footer__col__title mb-4">Socials</h4>
 
+                                    <ul class="socials__list list-inline">
+                                        <li class="social list-inline-item">
+                                            <a href=" #">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social list-inline-item">
+                                            <a href=" #">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li class="social list-inline-item">
+                                            <a href=" #">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container-fluid">
                 <p class="coppy-right text-center">© 2023 by Besties. Powered and secured by Wix.com</p>
             </div>
         </div>
     </footer>
 
+    <div class="fixed-socials d-none d-lg-block">
+        <ul class="nav-bar">
+            <li class="nav-item mb-2">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="#"><i class="fa-brands fa-youtube"></i>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="#"><i class="fa-brands fa-twitter"></i>
+            </li>
+        </ul>
+
+    </div>
+    <div id="app-overlay"></div>
+    <div id="shop-cart-popup" class="cart-popup">
+        <div class="cart-popup__header bg-dark p-4 text-light position-relative">
+            <span class="cart-popup__hidden-button h4"><i class="fa-solid fa-chevron-right"></i></span>
+            <p class="h1">Cart</p>
+        </div>
+        <div class="cart-popup__body ps-2 pe-2 pt-4 pb-4">
+            <p class="text-center">Cart is empty</p>
+        </div>
+    </div>
+    <div id="mobile-menu">
+        <div class="container">
+            <ul class="navbar-nav main-menu-list">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">SHOP ALL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">DOGS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BIRDS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">FISH & AQUATICS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">SMALL ANIMALS</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">REPTILES</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </ul>
+            <form class="search-bar d-flex mt-4" action="">
+                <input class="search-bar__input" type="text" name="" id="" placeholder="Search...">
+                <button type="submit" class="search-bar__button">Search</button>
+            </form>
+        </div>
+    </div>
     <script src="/libs/bootstrap-5.2.2/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+
 </body>
 
 </html>

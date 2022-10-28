@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 img {
     width: 100%;
 }
@@ -36,6 +40,61 @@ img {
     transform-origin: 0% 0%;
     background-color: var(--bs-dark);
 
+}
+
+/*  */
+#menu-toggle-icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.bars-icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bar-icon {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #111;
+    border-radius: 999px;
+    transition: 0.25s;
+}
+
+.bar-icon.--top {
+    top: 0;
+}
+
+.bar-icon.--middle {
+    top: calc(50% - 5%);
+}
+
+.bar-icon.--bottom {
+    top: calc(100% - 10%);
+}
+
+.bars-icon.is-open .bar-icon.--middle {
+    transform: translateX(100vw);
+}
+
+.bars-icon.is-open .bar-icon.--top {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.bars-icon.is-open .bar-icon.--bottom {
+    top: calc(50%);
+    transform: rotate(-45deg);
+}
+
+
+.min-h-400 {
+    min-height: 400px;
 }
 
 /*  */
@@ -136,10 +195,50 @@ img {
     background-color: var(--bs-orange);
 }
 
+.cart__hidden-button {
+    cursor: pointer;
+}
+
+/*  */
+.product-category {
+    position: relative;
+}
+
+.product-category__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.product-category__text-box {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.product-category__text-box
 
 /*  */
 .product {
     overflow: hidden;
+}
+
+.product__image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product__overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.product__image:hover .product__overlay {
+    transform: translateY(0);
 }
 
 .product__title {
@@ -169,6 +268,12 @@ img {
 
 /*  */
 
+.section:not(.banner) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+
 .section.banner .banner__text-box {
     position: absolute;
     top: 50%;
@@ -188,7 +293,133 @@ img {
     list-style: none;
 }
 
+.footer__menu__item {
+    margin-bottom: 0.3rem;
+}
+
 .footer__menu a {
+    line-height: 1.6;
     text-decoration: none;
     color: var(--bs-dark);
+}
+
+/*  */
+.fixed-socials {
+    position: fixed;
+    top: 50%;
+    right: 0.7rem;
+    transform: translateX(-50%);
+}
+
+.fixed-socials ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fixed-socials a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.cart-popup {
+    position: fixed;
+    width: 20rem;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.cart-popup.show {
+    transform: translateX(0);
+}
+
+.cart-popup__header {
+    position: relative;
+}
+
+.cart-popup__header p {
+    text-align: center;
+}
+
+.cart-popup__hidden-button {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.cart-popup__body {
+    height: 100%;
+    background-color: var(--bs-light);
+}
+
+#app-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+#mobile-menu {
+    position: fixed;
+    width: 20rem;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: 0.5s;
+    background-color: var(--bs-light);
+}
+
+#mobile-menu.show {
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 992px) {
+    .section:not(.banner) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section.banner .banner__text-box {
+        left: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section.banner .banner__text-box {
+        padding: 2rem 1rem 2rem 1rem;
+        left: 40%;
+    }
+
+    .section.banner .banner__text-box h1 {
+        font-size: 2rem;
+    }
+
+    .main-bar,
+    .bottom-bar {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section.banner .banner__text-box {
+        padding: 1rem 1rem 1rem 1rem;
+        left: 40%;
+    }
+
+    .section.banner .banner__text-box h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem !important;
+    }
 }
