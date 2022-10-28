@@ -7,6 +7,10 @@ img {
 }
 
 /*  */
+.container.container-max-lg {
+    max-width: 992px;
+}
+
 .divider {
     background-color: var(--bs-dark);
 }
